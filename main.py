@@ -4,6 +4,7 @@ from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
 def point(x = 0, y = 0):
+    glColor3ub(255, 255, 255)
     glPointSize(10)
     glBegin(GL_POINTS)
     glVertex2f(x, y)
@@ -11,22 +12,25 @@ def point(x = 0, y = 0):
 
 
 def bintang(x= 0, y = 0):
-    glColor3ub(255, 255, 255)
+    glColor3ub(238, 255, 0)
     glBegin(GL_LINES)
     glVertex2f(27.2 + x, 19.8 + y)
     glVertex2f(28.8 + x, 18.2 + y)
     glEnd()
 
+    glColor3ub(13, 0, 255)
     glBegin(GL_LINES)
     glVertex2f(27.2 + x, 18.2 + y)
     glVertex2f(28.8 + x, 19.8 + y)
     glEnd()
 
+    glColor3ub(0, 255, 17)
     glBegin(GL_LINES)
     glVertex2f(27 + x, 19 + y)
     glVertex2f(29 + x, 19 + y)
     glEnd()
 
+    glColor3ub(255, 0, 0)
     glBegin(GL_LINES)
     glVertex2f(28 + x, 20 + y)
     glVertex2f(28 + x, 18 + y)
