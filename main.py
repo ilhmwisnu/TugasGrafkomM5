@@ -3,32 +3,38 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
-def bintang():
-    glColor3ub(255, 255, 255)
-    glBegin(GL_LINES)
-    glVertex2f(27.2, 19.8)
-    glVertex2f(28.8, 18.2)
-    glEnd()
-
-    glBegin(GL_LINES)
-    glVertex2f(27.2, 18.2)
-    glVertex2f(28.8, 19.8)
-    glEnd()
-
-    glBegin(GL_LINES)
-    glVertex2f(27, 19)
-    glVertex2f(29, 19)
-    glEnd()
-
-    glBegin(GL_LINES)
-    glVertex2f(28, 20)
-    glVertex2f(28, 18)
-    glEnd()
-
+def point(x = 0, y = 0):
     glPointSize(10)
     glBegin(GL_POINTS)
-    glVertex2f(22, 24)
+    glVertex2f(x, y)
     glEnd()
+
+
+def bintang(x= 0, y = 0):
+    glColor3ub(255, 255, 255)
+    glBegin(GL_LINES)
+    glVertex2f(27.2 + x, 19.8 + y)
+    glVertex2f(28.8 + x, 18.2 + y)
+    glEnd()
+
+    glBegin(GL_LINES)
+    glVertex2f(27.2 + x, 18.2 + y)
+    glVertex2f(28.8 + x, 19.8 + y)
+    glEnd()
+
+    glBegin(GL_LINES)
+    glVertex2f(27 + x, 19 + y)
+    glVertex2f(29 + x, 19 + y)
+    glEnd()
+
+    glBegin(GL_LINES)
+    glVertex2f(28 + x, 20 + y)
+    glVertex2f(28 + x, 18 + y)
+    glEnd()
+
+
+
+
 
 
 
@@ -433,6 +439,15 @@ def showScreen():
     badan()
     huruf()
     bintang()
+    bintang(-2, 10)
+    bintang(-12, 10)
+    bintang(-6, 6)
+    bintang(-18, 6)
+    bintang(-21, 10)
+    bintang(-23, 0)
+    point(5, 3)
+    point(25, 3)
+    point(15, 25)
     
     #bendera bawah
     benderaBawah1()
