@@ -2,45 +2,29 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
-def segiTiga():
-    glColor3ub(100,100,100)
-    glLineWidth(3)
-    glBegin(GL_LINE_LOOP)
-    glVertex2f(100,100)
-    glVertex2f(200,100)
-    glVertex2f(150,300)
+def benderaAtas():
+    glColor3ub(255, 255, 255)
+    glBegin(GL_POLYGON)
+    glVertex2f(8, 18)
+    glVertex2f(10, 16)
+    glVertex2f(10, 14)
+    glVertex2f(9, 13)
     glEnd()
-
-def kubus():
-    glColor3ub(100,100,100)
-    glLineWidth(2)
+    glColor3ub(0, 0, 0)
     glBegin(GL_LINE_LOOP)
-    glVertex2f(300,300)
-    glVertex2f(500,300)
-    glVertex2f(500,500)
-    glVertex2f(300,500)
+    glVertex2f(8, 18)
+    glVertex2f(15, 18)
+    glVertex2f(15, 13)
+    glVertex2f(9, 13)
+    glVertex2f(10, 14)
+    glVertex2f(10, 16)
     glEnd()
-    # glPointSize(100.0)
-    glBegin(GL_LINE_LOOP)
-    glVertex2f(300,500)
-    glVertex2f(360,520)
-    glVertex2f(560,520)
-    glVertex2f(500,500)
-    glEnd()
-    # glPointSize(100.0)
-    glBegin(GL_LINE_LOOP)
-    glVertex2f(500,500)
-    glVertex2f(560,520)
-    glVertex2f(560,320)
-    glVertex2f(500,300)
-    glEnd()
-
 
 def iterate():
     glViewport(0, 0, 500, 500)
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
-    glOrtho(0.0, 750, 0.0, 750, 0.0, 1.0)
+    glOrtho(0.0, 30, 0.0, 30, 0.0, 1.0)
     glMatrixMode (GL_MODELVIEW)
     glLoadIdentity()
     
@@ -49,8 +33,7 @@ def showScreen():
     glLoadIdentity()
     iterate()
     glColor3f(2, 0.3, 2)
-    segiTiga()
-    kubus()
+    benderaAtas()
     glutSwapBuffers()
 
 glutInit()
