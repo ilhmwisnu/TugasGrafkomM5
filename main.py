@@ -159,6 +159,173 @@ def huruf():
     glVertex2f(19,10)
     glEnd()
 
+def benderaBawah1():
+    glBegin(GL_POLYGON)
+    glColor3f(0.0, 0.0, 1.0)
+    glVertex2f(8,9)
+    glVertex2f(8,7)
+    glVertex2f(10,5)
+    glVertex2f(10,9)
+    glEnd()
+
+def benderaBawah1OTL():
+    glBegin(GL_LINE_LOOP)
+    glColor3ub(255, 255, 255)
+    glVertex2f(8,9)
+    glVertex2f(8,7)
+    glVertex2f(10,5)
+    glVertex2f(10,9)
+    glEnd()
+
+def benderaBawah2():
+    glBegin(GL_POLYGON)
+    glColor3ub(222, 7, 0)
+    glVertex2f(10,5)
+    glVertex2f(11,4)
+    glVertex2f(12,4)
+    glVertex2f(12,9)
+    glVertex2f(10,9)
+    glEnd()
+
+def benderaBawah2OTL():
+    glBegin(GL_LINE_LOOP)
+    glColor3ub(255, 255, 255)
+    glVertex2f(10,5)
+    glVertex2f(11,4)
+    glVertex2f(12,4)
+    glVertex2f(12,9)
+    glVertex2f(10,9)
+    glEnd()
+
+def benderaBawah3():
+    glBegin(GL_POLYGON)
+    glColor3f(0.0, 0.0, 1.0)
+    glVertex2f(12,4)
+    glVertex2f(14,4)
+    glVertex2f(14,9)
+    glVertex2f(12,9)
+    glEnd()
+
+def benderaBawah3OTL():
+    glBegin(GL_LINE_LOOP)
+    glColor3ub(255, 255, 255)
+    glVertex2f(12,4)
+    glVertex2f(14,4)
+    glVertex2f(14,9)
+    glVertex2f(12,9)
+    glEnd()
+
+def benderaBawah4():
+    glBegin(GL_POLYGON)
+    glColor3ub(222, 7, 0)
+    glVertex2f(14,4)
+    glVertex2f(17,4)
+    glVertex2f(17,5)
+    glVertex2f(14,5)
+    glEnd()
+
+def benderaBawah4OTL():
+    glBegin(GL_LINE_LOOP)
+    glColor3ub(255, 255, 255)
+    glVertex2f(14,4)
+    glVertex2f(17,4)
+    glVertex2f(17,5)
+    glVertex2f(14,5)
+    glEnd()
+
+def benderaBawah5():
+    glBegin(GL_POLYGON)
+    glColor3ub(222, 7, 0)
+    glVertex2f(14,8)
+    glVertex2f(17,8)
+    glVertex2f(17,9)
+    glVertex2f(14,9)
+    glEnd()
+
+def benderaBawah5OTL():
+    glBegin(GL_LINE_LOOP)
+    glColor3ub(255, 255, 255)
+    glVertex2f(14,8)
+    glVertex2f(17,8)
+    glVertex2f(17,9)
+    glVertex2f(14,9)
+    glEnd()
+
+def bola():
+    glBegin(GL_POLYGON)
+    glColor3ub(255, 234, 0)
+    glVertex2f(14,5)
+    glVertex2f(17,5)
+    glVertex2f(17,8)
+    glVertex2f(14,8)
+    glEnd()
+
+def bolaOTL():
+    glBegin(GL_LINE_LOOP)
+    glColor3ub(255, 255, 255)
+    glVertex2f(14,5)
+    glVertex2f(17,5)
+    glVertex2f(17,8)
+    glVertex2f(14,8)
+    glEnd()
+
+def benderaBawah6():
+    glBegin(GL_POLYGON)
+    glColor3f(0.0, 0.0, 1.0)
+    glVertex2f(17,4)
+    glVertex2f(19,4)
+    glVertex2f(19,9)
+    glVertex2f(17,9)
+    glEnd()
+
+def benderaBawah6OTL():
+    glBegin(GL_LINE_LOOP)
+    glColor3ub(255, 255, 255)
+    glVertex2f(17,4)
+    glVertex2f(19,4)
+    glVertex2f(19,9)
+    glVertex2f(17,9)
+    glEnd()
+
+def benderaBawah7():
+    glBegin(GL_POLYGON)
+    glColor3ub(222, 7, 0)
+    glVertex2f(19,4)
+    glVertex2f(20,4)
+    glVertex2f(21,5)
+    glVertex2f(21,9)
+    glVertex2f(19,9)
+    glEnd()
+
+def benderaBawah7OTL():
+    glBegin(GL_LINE_LOOP)
+    glColor3ub(255, 255, 255)
+    glVertex2f(19,4)
+    glVertex2f(20,4)
+    glVertex2f(21,5)
+    glVertex2f(21,9)
+    glVertex2f(19,9)
+    glEnd()
+
+def benderaBawah8():
+    glBegin(GL_POLYGON)
+    glColor3f(0.0, 0.0, 1.0)
+    glVertex2f(21,5)
+    glVertex2f(23,7)
+    glVertex2f(23,9)
+    glVertex2f(21,9)
+    glEnd()
+
+def benderaBawah8OTL():
+    glBegin(GL_LINE_LOOP)
+    glColor3ub(255, 255, 255)
+    glVertex2f(21,5)
+    glVertex2f(23,7)
+    glVertex2f(23,9)
+    glVertex2f(21,9)
+    glEnd()
+
+    
 def iterate():
     glViewport(0, 0, 500, 500)
     glMatrixMode(GL_PROJECTION)
@@ -173,7 +340,29 @@ def showScreen():
     iterate()
     glColor3f(2, 0.3, 2)
     badan()
-    huruf()    
+    huruf()
+    
+    #bendera bawah
+    benderaBawah1()
+    benderaBawah1OTL()
+    benderaBawah2()
+    benderaBawah2OTL()
+    benderaBawah3()
+    benderaBawah3OTL()
+    benderaBawah4()
+    benderaBawah4OTL()
+    benderaBawah5()
+    benderaBawah5OTL()
+    bola()
+    bolaOTL()
+    benderaBawah6()
+    benderaBawah6OTL()
+    benderaBawah7()
+    benderaBawah7OTL()
+    benderaBawah8()
+    benderaBawah8OTL()
+    glutSwapBuffers()
+
     glutSwapBuffers()
 
 glutInit()
