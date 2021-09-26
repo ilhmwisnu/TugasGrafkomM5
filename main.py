@@ -2,6 +2,7 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
+<<<<<<< HEAD
 
 def badan():
     glColor3ub(242, 184, 24)
@@ -78,6 +79,85 @@ def badan():
     glVertex2f(15,19)
     glVertex2f(15,18)
     glVertex2f(15,18)
+=======
+def huruf():
+    # F
+    glColor3ub(54,54,54)
+    glBegin(GL_POLYGON)
+    glVertex2f(10,13)
+    glVertex2f(13,13)
+    glVertex2f(13,12)
+    glVertex2f(11,12)
+    glVertex2f(11,11)
+    glVertex2f(13,11)
+    glVertex2f(13,10)
+    glVertex2f(11,10)
+    glVertex2f(11,9)
+    glVertex2f(10,9)
+    glVertex2f(10,13)
+    glEnd()
+    
+    glColor3ub(0,0,0)
+    glBegin(GL_LINE_LOOP)
+    glVertex2f(10,13)
+    glVertex2f(13,13)
+    glVertex2f(13,12)
+    glVertex2f(11,12)
+    glVertex2f(11,11)
+    glVertex2f(13,11)
+    glVertex2f(13,10)
+    glVertex2f(11,10)
+    glVertex2f(11,9)
+    glVertex2f(10,9)
+    glVertex2f(10,13)
+    glEnd()
+    
+    # C
+    glColor3ub(54,54,54)
+    glBegin(GL_POLYGON)
+    glVertex2f(14,13)
+    glVertex2f(17,13)
+    glVertex2f(17,12)
+    glVertex2f(15,12)
+    glVertex2f(15,10)
+    glVertex2f(17,10)
+    glVertex2f(17,9)
+    glVertex2f(14,9)
+    glEnd()
+
+    glColor3ub(0,0,0)
+    glBegin(GL_LINE_LOOP)
+    glVertex2f(14,13)
+    glVertex2f(17,13)
+    glVertex2f(17,12)
+    glVertex2f(15,12)
+    glVertex2f(15,10)
+    glVertex2f(17,10)
+    glVertex2f(17,9)
+    glVertex2f(14,9)
+    glEnd()
+
+    # B
+    glColor3ub(54,54,54)
+    glBegin(GL_POLYGON)
+    glVertex2f(18,13)
+    glVertex2f(21,13)
+    glVertex2f(21,9)
+    glVertex2f(18,9)
+    glEnd()
+    glColor3ub(255,255,255)
+    glBegin(GL_POLYGON)
+    glVertex2f(19,12)
+    glVertex2f(20,12)
+    glVertex2f(20,11.5)
+    glVertex2f(19,11.5)
+    glEnd()
+    glBegin(GL_POLYGON)
+    glVertex2f(19,10.5)
+    glVertex2f(20,10.5)
+    glVertex2f(20,10)
+    glVertex2f(19,10)
+>>>>>>> 75f23ba351c879530780e45c64abf84c5a2cf6a5
     glEnd()
 
 def iterate():
@@ -93,10 +173,14 @@ def showScreen():
     glLoadIdentity()
     iterate()
     glColor3f(2, 0.3, 2)
+<<<<<<< HEAD
     # segiTiga()
     # kubus()
     # kotak()
     badan()
+=======
+    huruf()
+>>>>>>> 75f23ba351c879530780e45c64abf84c5a2cf6a5
     
     glutSwapBuffers()
 
