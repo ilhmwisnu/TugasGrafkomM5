@@ -2,6 +2,35 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
+def bintang():
+    glColor3ub(255, 255, 255)
+    glBegin(GL_LINES)
+    glVertex2f(27.2, 19.8)
+    glVertex2f(28.8, 18.2)
+    glEnd()
+
+    glBegin(GL_LINES)
+    glVertex2f(27.2, 18.2)
+    glVertex2f(28.8, 19.8)
+    glEnd()
+
+    glBegin(GL_LINES)
+    glVertex2f(27, 19)
+    glVertex2f(29, 19)
+    glEnd()
+
+    glBegin(GL_LINES)
+    glVertex2f(28, 20)
+    glVertex2f(28, 18)
+    glEnd()
+
+    glPointSize(10)
+    glBegin(GL_POINTS)
+    glVertex2f(22, 24)
+    glEnd()
+
+
+
 
 def badan():
     glColor3ub(242, 184, 24)
@@ -348,6 +377,7 @@ def showScreen():
     glColor3f(2, 0.3, 2)
     badan()
     huruf()
+    bintang()
     
     #bendera bawah
     benderaBawah1()
