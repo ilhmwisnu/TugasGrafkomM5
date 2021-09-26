@@ -2,7 +2,6 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
-<<<<<<< HEAD
 
 def badan():
     glColor3ub(242, 184, 24)
@@ -79,7 +78,8 @@ def badan():
     glVertex2f(15,19)
     glVertex2f(15,18)
     glVertex2f(15,18)
-=======
+    glEnd()
+
 def huruf():
     # F
     glColor3ub(54,54,54)
@@ -145,7 +145,7 @@ def huruf():
     glVertex2f(21,9)
     glVertex2f(18,9)
     glEnd()
-    glColor3ub(255,255,255)
+    glColor3ub(242, 184, 24)
     glBegin(GL_POLYGON)
     glVertex2f(19,12)
     glVertex2f(20,12)
@@ -157,7 +157,6 @@ def huruf():
     glVertex2f(20,10.5)
     glVertex2f(20,10)
     glVertex2f(19,10)
->>>>>>> 75f23ba351c879530780e45c64abf84c5a2cf6a5
     glEnd()
 
 def iterate():
@@ -173,15 +172,8 @@ def showScreen():
     glLoadIdentity()
     iterate()
     glColor3f(2, 0.3, 2)
-<<<<<<< HEAD
-    # segiTiga()
-    # kubus()
-    # kotak()
     badan()
-=======
-    huruf()
->>>>>>> 75f23ba351c879530780e45c64abf84c5a2cf6a5
-    
+    huruf()    
     glutSwapBuffers()
 
 glutInit()
