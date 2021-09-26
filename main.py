@@ -10,6 +10,17 @@ from OpenGL.GLU import *
 #     glVertex2f(200,100)
 #     glVertex2f(150,300)
 #     glEnd()
+def kotak():
+    glColor3ub(100,100,100)
+    # glLineWidth(2)
+    glBegin(GL_QUADS)
+    glVertex2f(3,3)
+    glVertex2f(5,3)
+    glVertex2f(5,5)
+    glVertex2f(3,5)
+    glEnd()
+
+
 
 # def kubus():
 #     glColor3ub(100,100,100)
@@ -36,11 +47,12 @@ from OpenGL.GLU import *
 #     glEnd()
 
 
+
 def iterate():
     glViewport(0, 0, 500, 500)
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
-    glOrtho(0.0, 160, 0.0, 160, 0.0, 1.0)
+    glOrtho(0.0, 30, 0.0, 30, 0.0, 1.0)
     glMatrixMode (GL_MODELVIEW)
     glLoadIdentity()
     
@@ -51,6 +63,8 @@ def showScreen():
     glColor3f(2, 0.3, 2)
     # segiTiga()
     # kubus()
+    kotak()
+    
     glutSwapBuffers()
 
 glutInit()
