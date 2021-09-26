@@ -4,6 +4,7 @@ from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
 def point(x = 0, y = 0):
+    # membuat titik berukuran 10
     glColor3ub(255, 255, 255)
     glPointSize(10)
     glBegin(GL_POINTS)
@@ -12,6 +13,7 @@ def point(x = 0, y = 0):
 
 
 def bintang(x= 0, y = 0):
+    # membuat bintang dengan posisi tertentu
     glColor3ub(238, 255, 0)
     glBegin(GL_LINES)
     glVertex2f(27.2 + x, 19.8 + y)
@@ -120,6 +122,7 @@ def badan():
     glEnd()
 
 def huruf():
+    # Membuat tampilan Huruf bertuliskan FCB
     # F
     glColor3ub(54,54,54)
     glBegin(GL_POLYGON)
