@@ -13,36 +13,39 @@ def point(x = 0, y = 0):
 
 
 def bintang(x= 0, y = 0):
+    glRotatef(45,x,y,0)
     # membuat bintang dengan posisi tertentu
     glColor3ub(238, 255, 0)
     glBegin(GL_LINES)
-    glVertex2f(27.2 + x, 19.8 + y)
-    glVertex2f(28.8 + x, 18.2 + y)
+    glVertex2f(x - 0.75, y -0.75)
+    glVertex2f(x + 0.75, y +0.75)
+    # glVertex2f(27.2 + x, 19.8 + y)
+    # glVertex2f(28.8 + x, 18.2 + y)
     glEnd()
 
     glColor3ub(13, 0, 255)
     glBegin(GL_LINES)
-    glVertex2f(27.2 + x, 18.2 + y)
-    glVertex2f(28.8 + x, 19.8 + y)
+    # glVertex2f(27.2 + x, 18.2 + y)
+    # glVertex2f(28.8 + x, 19.8 + y)
+    glVertex2f(x - 0.75, y + 0.75)
+    glVertex2f(x + 0.75, y -0.75)
     glEnd()
 
     glColor3ub(0, 255, 17)
     glBegin(GL_LINES)
-    glVertex2f(27 + x, 19 + y)
-    glVertex2f(29 + x, 19 + y)
+    # glVertex2f(27 + x, 19 + y)
+    # glVertex2f(29 + x, 19 + y)
+    glVertex2f(x, y -1)
+    glVertex2f(x,  y +1)
     glEnd()
 
     glColor3ub(255, 0, 0)
     glBegin(GL_LINES)
-    glVertex2f(28 + x, 20 + y)
-    glVertex2f(28 + x, 18 + y)
+    # glVertex2f(28 + x, 20 + y)
+    # glVertex2f(28 + x, 18 + y)
+    glVertex2f(x + 1, y )
+    glVertex2f(x- 1, y )
     glEnd()
-
-
-
-
-
-
 
 
 def badan():
@@ -439,33 +442,12 @@ def benderaAtasKanan():
         glVertex2f(17 + i, 13)
         glEnd()
 
+def logo():
     
-def iterate():
-    glViewport(0, 0, 500, 500)
-    glMatrixMode(GL_PROJECTION)
-    glLoadIdentity()
-    glOrtho(0.0, 30, 0.0, 30, 0.0, 1.0)
-    glMatrixMode (GL_MODELVIEW)
-    glLoadIdentity()
-    
-def showScreen():
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
-    glLoadIdentity()
-    iterate()
-    glColor3f(2, 0.3, 2)
+    #glTranslated
+    glTranslated(0,4,0)
     badan()
     huruf()
-    bintang()
-    bintang(-2, 10)
-    bintang(-12, 10)
-    bintang(-6, 6)
-    bintang(-18, 6)
-    bintang(-21, 10)
-    bintang(-23, 0)
-    point(5, 3)
-    point(25, 3)
-    point(15, 25)
-    
     #bendera bawah
     benderaBawah1()
     benderaBawah1OTL()
@@ -477,7 +459,6 @@ def showScreen():
     benderaBawah4OTL()
     benderaBawah5()
     benderaBawah5OTL()
-    bola()
     bolaOTL()
     benderaBawah6()
     benderaBawah6OTL()
@@ -487,6 +468,31 @@ def showScreen():
     benderaBawah8OTL()
     benderaAtasKiri()
     benderaAtasKanan()
+    bola()
+    
+def iterate():
+    glViewport(0, 0, 600, 600)
+    glMatrixMode(GL_PROJECTION)
+    glLoadIdentity()
+    glOrtho(0.0, 30, 0.0, 30, 0.0, 1.0)
+    glMatrixMode (GL_MODELVIEW)
+    glLoadIdentity()
+    
+def showScreen():
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
+    glLoadIdentity()
+    iterate()
+    glColor3f(2, 0.3, 2)
+    logo()
+    # glRotatef(5,5,5,0)
+    
+    bintang(5,5)
+    # bintang()
+    point(5, 3)
+    point(27, 5)
+    point(25, 25)
+    
+   
     glutSwapBuffers()
 
     glutSwapBuffers()
