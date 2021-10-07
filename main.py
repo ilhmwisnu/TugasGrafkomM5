@@ -483,11 +483,12 @@ def showScreen():
     glLoadIdentity()
     iterate()
     glColor3f(2, 0.3, 2)
+
     logo()
-    # glRotatef(5,5,5,0)
-    
     bintang(5,5)
-    # bintang()
+    bintang(5,5)
+    bintang(30,30)
+    bintang(25,5)
     point(5, 3)
     point(27, 5)
     point(25, 25)
